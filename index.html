@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script> 
+    <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script> 
+    <script src="https://rawgit.com/mayognaise/aframe-gif-component/master/dist/aframe-gif-component.min.js"></script> 
+  </head>
+  <body>
+    <a-scene>
+      <a-entity camera look-controls position="0 4.6 0">
+        <a-cursor color="cyan"></a-cursor>
+      </a-entity>
+      <a-entity text="value: The guy is trying to attack you. To defend yourself, now punch his eyes!; width: 20; color: cyan; side: double" position="0 10 -9"></a-entity>
+     
+      <a-assets>
+        <img id="stand" crossorigin="anonymous" src="https://c1.staticflickr.com/2/1901/44468730854_d9ebb85bff_b.jpg">
+        <img id="down" crossorigin="anonymous" src="https://c1.staticflickr.com/2/1946/45141675292_23b7a27949_b.jpg">
+      
+        <img id="city" crossorigin="anonymous" src="https://c1.staticflickr.com/5/4399/36325187134_d3c61b44b6_h.jpg">
+      </a-assets>
+      <a-image src="#stand" position="0 2 -10" height=12 width=8>
+        <a-animation attribute="visible" to="false" begin="click"></a-animation>
+      </a-image>
+      <a-image src="#down" position="0 2 -11" height=12 width=8></a-image>
+      <a-sky src="#city"></a-sky>
+
+    </a-scene>
+  </body>
+</html>
